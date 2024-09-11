@@ -1,0 +1,47 @@
+.imageItemDisplay{
+    width: 325px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.imageItem {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.priceInfor{
+    display: flex;
+    align-items: center;
+}
+.star{
+    display: flex;
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.priceBeforeDiscount{
+    text-decoration: line-through;
+    padding: 0px 10px 0px 10px;
+    color:#00000066;
+}
+.discountInfor{
+    display: flex;
+
+}
+.percentDiscount{
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    color:red;  
+    background-color: #FF33331A;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.number{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

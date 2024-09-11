@@ -1,0 +1,24 @@
+.Comment{
+    width: 500px;
+    height: fit-content;
+    padding: 28px 32px;
+    border-radius: 20px;
+    border: 1px solid #0000001A;
+}
+
+.nameCustomer{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+.content ,.timeComment{
+    color: #00000099;
+}
+.content{
+    margin-bottom: 24px;
+}
+.header{
+    display: flex;
+    align-items: center;
+}

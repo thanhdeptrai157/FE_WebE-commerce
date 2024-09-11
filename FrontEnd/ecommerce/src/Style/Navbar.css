@@ -1,0 +1,67 @@
+.Navbar{
+    display: flex;
+    height: fit-content;
+    margin: 20px 40px 20px 80px;
+    align-items: center;
+}
+#logo{
+    font-size: 32px;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+}
+.itemNav{
+    width: 35%;
+    display: flex;
+    
+}
+.listItems{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    gap: 10%;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+.searchBar{
+    width: 40%;
+    height: fit-content;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+#inputSearch{
+    width: 90%;
+    border: none;
+    height: 100%;
+    background-color: transparent;
+    
+}
+#inputSearch:focus{
+    outline: none;
+}
+.UserZone{
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:1192px){
+    #inputSearch{
+        width: 70%;
+    }
+    .listItems{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:980px){
+    #logo{
+        font-size: 20px;
+    }
+    #inputSearch{
+        width: 70%;
+    }
+    .listItems{
+        font-size: 12px;
+    }
+}

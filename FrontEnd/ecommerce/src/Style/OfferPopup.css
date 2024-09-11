@@ -1,0 +1,43 @@
+.Offer{
+    display: flex;
+    border-radius: 20px; 
+    background-color: black;
+    justify-content: space-between;
+    padding: 36px 64px;
+    align-items: center;
+}
+.requestOffer{
+    width: 30%;
+}
+.inputMailZone{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    gap:10px;
+}
+.inputMailZone input{
+    width: 90%;
+    border: none;
+}
+.inputMailZone input:focus{
+    outline: none;
+}
+.offerContent{
+    color: white;
+    width: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.btnSubmit{
+    font-size: 14px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+    font-family: 'roboto', sans-serif;
+}
