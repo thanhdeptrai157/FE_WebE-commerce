@@ -2,9 +2,152 @@
     padding: 20px 70px;
 
 }
+.inforProduct{
+    display: flex;
+    justify-content: space-between;
+}
 .marginForm{
     border-top: 1px solid #f0f0f0;
 }
+.thumbnail{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
 .ImageThumbnail{
-    
+    width: 150px;
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid transparent
+}
+.imageProduct{
+    display: flex;
+    gap:20px;
+    width: 60%;
+}
+.main-image{
+    flex:1;
+    display: block;
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in{
+    opacity: 1;
+}
+.star-Product{
+    margin-top: 15px;
+}
+.priceInfor{
+    margin-top: 15px;
+}
+.PreviewImage{
+    width: 550px;
+    height: 625px;
+}
+.mainContent{
+    margin-top: 15px;
+}
+.contentProduct{
+    width: 48%;
+}
+.detail{
+    font-size: 30px;
+}
+.percentDetail{
+    padding: 0px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.isSelected{
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: #f0f0f0;
+}
+.nameProduct{
+    font-size: 38px;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.star-Product{
+    display: flex;
+    gap: 10px;
+}
+.mainContent{
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+}
+.color{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+.colorZone{
+    display: flex;
+    gap: 20px;
+}
+.color1{
+    background-color: #4F4631;
+}
+.color2{
+    background-color: #314F4A;
+}
+.color3{
+    background-color: #31344F;
+}
+.sizeZone{
+    display: flex;
+    gap: 20px
+}
+.size{
+    padding: 12px 24px;
+    border-radius: 20px;
+    background-color: #F0F0F0;
+}
+.quantity{
+    display: flex;
+    flex: 0.2;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background-color: #F0F0F0;
+}
+.amount{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.addBtn{
+    flex:0.7;
+}
+.no-spinners::-webkit-inner-spin-button,
+.no-spinners::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spinners {
+    display: flex;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    width:50px;
+}
+.quantity button{
+    background-color: transparent;
+    border: none;
+}
+
+.textColor{
+   color: #00000099;
+}
+.addBtn{
+    margin-top: 0;
 }
