@@ -6,8 +6,14 @@ import DisplayItem from "./DisplayItem";
 import Comment from "./Comment";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {renderItem} from "../Utils/Function";
+import { useScrollTop } from "../Utils/Function";
 const Home = () => {
+    useScrollTop();
+    const navigate = useNavigate();
+    const handleClick = () =>{
+        navigate(`/category`)
+    }
     const title = ["NEW ARRIVALS", "TOP SELLING"]
     const items = [
         {   
@@ -87,13 +93,7 @@ const Home = () => {
             timeComment: "August 16, 2023",
         },
     ]
-    const renderItem = (itemList, Component) => {
-        const renderedItems = [];
-        for (let i = 0; i < itemList.length; ++i) {
-            renderedItems.push(<Component key={itemList[i].id} {...itemList[i]} />);
-        }
-        return renderedItems;
-    }
+    
     // const renderItem = (itemList, Component) => {
     //     return itemList.map((item) => <Component key={item.id} e={item} />);
     // };
@@ -132,23 +132,23 @@ const Home = () => {
                     <h1 className="nameTopic heading">BROWSE BY DRESS STYLE</h1>
                     <div className="allStyle">
                         <div className="flexBox">
-                            <div className="causual">
+                            <div className="causual"  onClick={()=>handleClick()}>
                                 <p className="nameStyle">Casual</p>
-                                <img src="Image/9.png" alt="" />
+                                <img src="/Image/9.png" alt="" />
                             </div>
-                            <div className="formal">
+                            <div className="formal"  onClick={()=>handleClick()}>
                                 <p className="nameStyle">Formal</p>
-                                <img src="Image/11.png" alt="" />
+                                <img src="/Image/11.png" alt="" />
                             </div>
                         </div>
                         <div className="flexBox">
-                            <div className="party">
+                            <div className="party"  onClick={()=>handleClick()}>
                                 <p className="nameStyle">Party</p>
-                                <img src="Image/10.png" alt="" />
+                                <img src="/Image/10.png" alt="" />
                             </div>
-                            <div className="gym">
+                            <div className="gym"  onClick={()=>handleClick()}>
                                 <p className="nameStyle">Gym</p>
-                                <img src="Image/12.png" alt="" />
+                                <img src="/Image/12.png" alt="" />
                             </div>
                         </div>
                     </div>

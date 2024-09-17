@@ -1,0 +1,36 @@
+.imageProductCart { 
+    width: 15%;
+    height: 130px;
+}
+
+.cardProductContainer{
+    padding: 10px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.productCardInfor{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+hr{
+    background-color: #f0f0f0;
+    border: none;
+    height: 1px;
+}
+.changeValue{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.changeValue div{
+    text-align: right;
+}
+.quantity{
+    text-align: end;
+}
+.priceCart{
+    font-size: 25px;
+}

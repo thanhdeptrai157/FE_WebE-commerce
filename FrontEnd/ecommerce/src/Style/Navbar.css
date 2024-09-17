@@ -47,6 +47,9 @@
     align-items: center;
     justify-content: center;
 }
+.User-cart{
+    display: flex;
+}
 @media (max-width:1192px){
     #inputSearch{
         width: 70%;

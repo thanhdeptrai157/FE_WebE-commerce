@@ -4,7 +4,9 @@ import '../Style/Category.css'
 import { faArrowLeft, faArrowRight, faChevronDown, faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Item from "./Item";
+import { useScrollTop } from "../Utils/Function";
 const Category = () => {
+    useScrollTop();
     const [minValue, setMinValue] = useState(20);
     const [maxValue, setMaxValue] = useState(80);
 
@@ -12,17 +14,19 @@ const Category = () => {
         const value = Math.min(event.target.value, maxValue - 1);
         setMinValue(value);
     };
+
+
     const colors = [
-        '#FF5733', // đỏ
-        '#33FF57', // xanh lá
-        '#3357FF', // xanh dương
-        '#F1C40F', // vàng
-        '#FF33F6', // hồng
-        '#8E44AD', // tím
-        '#E67E22', // cam
-        '#1ABC9C', // xanh ngọc
-        '#3498DB', // xanh dương nhạt
-        '#9B59B6', // tím nhạt
+        '#FF5733', 
+        '#33FF57', 
+        '#3357FF', 
+        '#F1C40F', 
+        '#FF33F6', 
+        '#8E44AD', 
+        '#E67E22', 
+        '#1ABC9C', 
+        '#3498DB', 
+        '#9B59B6',
     ];
     const sizes = [
         'XX-Small',
@@ -140,7 +144,7 @@ const Category = () => {
                     <p>Causual </p>
                 </div>
                 <div className="CategoryContent">
-                    <div className="filterOption">
+                    <div className="filterCategory">
                         <div style={{
                             display: "flex", alignItems: "center",
                             justifyContent: "space-between",
@@ -181,7 +185,7 @@ const Category = () => {
                                     onChange={handleMaxChange}
                                     className="slider"
                                 />
-                                <div className="values">
+                                <div className = "values">
                                     <span>Min: {minValue}</span>
                                     <span>Max: {maxValue}</span>
                                 </div>
@@ -240,7 +244,7 @@ const Category = () => {
                     <div className="displayProducts ">
                         <div className="values">
                             <span style={{fontSize: "25px", fontWeight: "bold"}}>Casual</span>
-                            <p style={{margin: 0}}>Showing 1-10 of 100 Products  Sort by <span>Most Popular<FontAwesomeIcon icon={faChevronDown} /></span></p>
+                            <p style={{margin: 0}}>Showing 1-10 of 100 Products  Sort by <span style={{fontWeight: "bold"}}>Most Popular<FontAwesomeIcon icon={faChevronDown} /></span></p>
                         </div>
                         <div className="productDisplay container">
                             {renderItem(items, Item)}

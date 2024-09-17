@@ -9,7 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { faMinus } from "@fortawesome/free-solid-svg-icons/faMinus";
+import {renderItem, useScrollTop} from "../Utils/Function";
 const ProductsDetail = () => {
+    useScrollTop();
     const items = [
         {
             nameItem: "Polo with Contrast Trims",
@@ -77,13 +79,7 @@ const ProductsDetail = () => {
         navigate(`/product/${id}`);
     };
 
-    const renderItem = (itemList, Component, addClass) => {
-        const renderedItems = [];
-        for (let i = 0; i < itemList.length; ++i) {
-            renderedItems.push(<Component key={itemList[i].id} {...itemList[i]} className={addClass} />);
-        }
-        return renderedItems;
-    }
+    
     const [selectedImage, setSelectedImage] = useState(images[0].source);
     const [selectedImageid, setSelectedImageId] = useState(images[0].id);
     const [fadeClass, setFadeClass] = useState("fade-in");
@@ -233,7 +229,7 @@ const ProductsDetail = () => {
 
                 </div>
                 <div>
-                    <DisplayItem title="YOU MAY ALSO LIKE" func={renderItem(items, Item)} />
+                    <DisplayItem title="YOU MAY ALSO LIKE" func={renderItem(items, Item, '')} />
                 </div>
             </div>
         </div>

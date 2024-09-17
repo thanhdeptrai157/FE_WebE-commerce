@@ -28,8 +28,10 @@ const Navbar = () => {
             </div>
             <div className='UserZone'>
                 <div className='User-cart' >
-                    <FontAwesomeIcon icon={faCartShopping} style={{ marginRight: '40px' }} />
-                    <FontAwesomeIcon icon={faUser} />
+                    <img src='/Image/Cart.svg'/>
+                    <img src='/Image/User.svg' style = {{marginLeft: "74%"}}/>
+                    {/* <FontAwesomeIcon icon={faCartShopping} style={{ marginRight: '40px' }} />
+                    <FontAwesomeIcon icon={faUser} /> */}
                 </div>
             </div>
         </div>
