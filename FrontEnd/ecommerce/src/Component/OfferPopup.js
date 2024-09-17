@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const OfferPopup = ()=>{
     return (
-        <div style={{padding: "20px 70px", height: "fit-content"}}>
+        <div style={{padding: "0px 70px", height: "fit-content"}}>
             <div className="Offer">
                 <div className="offerContent">
                     STAY UPTO DATE ABOUT OUR LATEST OFFERS

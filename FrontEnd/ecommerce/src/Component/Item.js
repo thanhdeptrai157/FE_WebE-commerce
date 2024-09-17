@@ -1,24 +1,24 @@
 
 import '../Style/Item.css'
-
+import { useNavigate } from 'react-router-dom';
 const Item = (e) => {
+    const navigate = useNavigate();
 
-    // const [isDiscount, getRenderPrice] = useState(e.isDiscount);
-    // getRenderPrice = () => {
-    //     return isDiscount;
-    // }
+    const handleClick = (id) => {
+      navigate(`/product/id=${id}`);
+    };
     return (
-        <div>
-            <div className="imageItemDisplay">
-                <img src={e.source} alt="item" className="imageItem" />
+        <div style={{padding: "10px 0px"}}>
+            <div className="imageItemDisplay" id = {`product-${e.id}`} onClick={()=>handleClick(e.id)}>
+                <img src={e.source} alt="item" className="imageItem" id = {`image${e.id}`} />
             </div>
-            <h4 style={{ fontFamily: "satoshi, sans-serif", marginBlockEnd: "5px", marginBlockStart: "10px" }}>{e.nameItem}</h4>
+            <h5 style={{ fontFamily: "Satoshi, sans-serif", marginBlockEnd: "5px", marginBlockStart: "10px", fontSize:"18px" }}>{e.nameItem}</h5>
             <div className="star">
-                <img src="Image/Star.png" alt=''/>
-                <img src="Image/Star.png" alt=''/>
-                <img src="Image/Star.png" alt=''/>
-                <img src="Image/Star.png" alt=''/>
-                <img src="Image/Star.png" alt=''/>
+                <img src="/Image/Star.png" alt=''/>
+                <img src="/Image/Star.png" alt=''/>
+                <img src="/Image/Star.png" alt=''/>
+                <img src="/Image/Star.png" alt=''/>
+                <img src="/Image/Star.png" alt=''/>
             </div>
             <div className="priceInfor number">
                 <div className="price">{e.price}</div>

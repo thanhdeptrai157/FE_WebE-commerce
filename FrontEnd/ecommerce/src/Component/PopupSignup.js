@@ -13,7 +13,7 @@ const Popup = () => {
         <div className="Popup" style={{ 
             backgroundColor: "black", 
             display: "flex",
-            width: "100%",
+            padding: "0px 70px"
             }}>
             <div className="Noti" style={{ 
                 width: "100%", 

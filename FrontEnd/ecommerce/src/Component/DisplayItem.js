@@ -1,11 +1,11 @@
 import React from "react";
-
-const displayItem = ({e, func}) => {
+import Item from "./Item";
+const displayItem = ({title, func}) => {
     return (
-        <div className="displayItemZone paddingCus">
+        <div className={`displayItemZone paddingCus`}>
             <div style={{ borderBottom: "1px solid #0000001A" }}>
                 <div className="topic">
-                    <h1 className="nameTopic">{e.title}</h1>
+                    <h1 className="nameTopic">{title}</h1>
                 </div>
                 <div className="displayItems">
                     {func}

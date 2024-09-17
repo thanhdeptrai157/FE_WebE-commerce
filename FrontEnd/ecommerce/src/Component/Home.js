@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import '../Style/Home.css'
 import Item from "./Item";
 import DisplayItem from "./DisplayItem";
@@ -7,33 +8,31 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
-    const heading = [
-        {
-            title: "NEW ARRIVALS"
-        },
-        {
-            title: "TOP SELLING"
-        }
-    ]
+    const title = ["NEW ARRIVALS", "TOP SELLING"]
     const items = [
-        {
+        {   
+            id:1,
             nameItem: "Checkered Shirt",
             source: "Image/1.png",
             price: "$120",
             isDiscount: false,
         },
         {
+            id:2,
             nameItem: "Sleeve Striped T-Shirt",
             source: "Image/2.png",
             price: "$240",
             isDiscount: true,
         },
         {
+            id:3,
             nameItem: "T-shirt with Tape Detail",
             source: "Image/3.png",
             price: "$180",
             isDiscount: false,
-        }, {
+        }, 
+        {
+            id:4,
             nameItem: "Skinny Fit Jean",
             source: "Image/4.png",
             price: "$130",
@@ -43,24 +42,28 @@ const Home = () => {
 
     const topSelling = [
         {
+            id:5,
             nameItem: "Vertical Striped Shirt",
             source: "Image/5.png",
             price: "$212",
             isDiscount: true,
         },
         {
+            id:6,
             nameItem: "Courage Graphic T-Shirt",
             source: "Image/6.png",
             price: "$145",
             isDiscount: false,
         },
         {
+            id:7,
             nameItem: "Loose Fit Bermuda Shorts",
             source: "Image/7.png",
             price: "$80",
             isDiscount: false,
         },
         {
+            id:8,
             nameItem: "Faded Skinny Jeans",
             source: "Image/8.png",
             price: "$210",
@@ -91,10 +94,13 @@ const Home = () => {
         }
         return renderedItems;
     }
-
+    // const renderItem = (itemList, Component) => {
+    //     return itemList.map((item) => <Component key={item.id} e={item} />);
+    // };
+    
     return (
-        <div>
-            <div className="infor-Banner paddingCus">
+        <div >
+             <div className="infor-Banner paddingCus">
                 <h1 className="sologan">FIND CLOTHES<br></br>
                     THAT MATCHES<br></br>
                     YOUR STYLE</h1>
@@ -118,11 +124,11 @@ const Home = () => {
                 <div className="brand-name" style={{ fontFamily: "Futura" }}>Calvin Klein</div>
             </div>
 
-            <DisplayItem e={heading[0]} func={renderItem(items, Item)} />
-            <DisplayItem e={heading[1]} func={renderItem(topSelling, Item)} />
+            <DisplayItem title = {title[0]} func={renderItem(items, Item)}  />
+            <DisplayItem title = {title[1]} func={renderItem(topSelling, Item)} />
 
             <div className="styleBrowse ">
-                <div className="displayItemZone style paddingCus" >
+                <div className="displayStyleZone style paddingCus" >
                     <h1 className="nameTopic heading">BROWSE BY DRESS STYLE</h1>
                     <div className="allStyle">
                         <div className="flexBox">

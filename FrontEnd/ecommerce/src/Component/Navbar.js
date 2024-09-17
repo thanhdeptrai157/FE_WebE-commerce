@@ -3,10 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
+    
     return (
         <div className="Navbar">
-            <span id="logo"><strong>SHOP.CO</strong></span>
+             <Link to="/" id="logo">
+                <strong>SHOP.CO</strong>
+            </Link>
             <div className='itemNav'>
                 <ul className="listItems">
                     <li>Shop</li>
@@ -15,6 +19,7 @@ const Navbar = () => {
                     <li>Brands</li>
                 </ul>
             </div>
+            
             <div className="searchBar">
                 <div className='searchItems'>
                     <span style={{ padding: "10px" }}><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
